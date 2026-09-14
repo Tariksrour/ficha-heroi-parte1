@@ -319,3 +319,94 @@ body {
         max-width: 900px;
     }
 }
+.avatar-heroi {
+    position: static;
+    display: block;
+    width: 100%;
+    max-width: 420px;
+    height: auto;
+    margin: 16px 0 24px;
+    padding: 0;
+    overflow: visible;
+    clip-path: none;
+    border: 2px solid var(--dourado);
+    border-radius: 12px;
+}
+@media (min-width: 1024px) {
+    header {
+        width: calc(100% - 48px);
+        max-width: 1000px;
+    }
+
+    nav {
+        flex-direction: row;
+        align-items: stretch;
+        gap: 12px;
+    }
+
+    nav a {
+        flex: 1;
+        width: auto;
+        max-width: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+}
+#historia {
+    border-left-color: var(--roxo);
+}
+
+#historia p + p {
+    margin-top: 16px;
+}
+
+.historia-continuacao {
+    color: var(--dourado);
+    font-style: italic;
+    font-weight: 600;
+}
+#historia {
+    border-left-color: var(--roxo);
+}
+
+.historia-completa {
+    margin-top: 20px;
+}
+
+.historia-completa summary {
+    padding: 12px 16px;
+    color: var(--texto);
+    background-color: #333333;
+    border: 1px solid var(--dourado);
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.2s;
+}
+
+.historia-completa summary:hover {
+    background-color: #493b25;
+}
+
+.historia-completa summary:focus-visible {
+    outline: 3px solid var(--lava);
+    outline-offset: 4px;
+}
+
+.historia-completa p {
+    margin-top: 20px;
+}
+
+.historia-completa blockquote {
+    margin: 20px 0;
+    padding: 12px 20px;
+    border-left: 3px solid var(--dourado);
+    font-style: italic;
+}
+
+.historia-continuacao {
+    color: var(--dourado);
+    font-weight: 600;
+}
