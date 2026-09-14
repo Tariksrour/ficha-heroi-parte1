@@ -1,0 +1,321 @@
+
+:root {
+    --fundo: #1a1a1a;
+    --lava: #ff6b35;
+    --dourado: #d4a017;
+    --roxo: #7b2ff7;
+    --texto: #f5f5f5;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: var(--fundo);
+    color: var(--texto);
+    font-family: "Rajdhani", Arial, sans-serif;
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+
+header,
+main,
+footer {
+    width: calc(100% - 48px);
+    max-width: 1000px;
+    margin-left: 24px;
+    margin-right: 24px;
+    text-align: left;
+}
+
+
+header {
+    padding: 32px 0 16px;
+}
+
+h1 {
+    margin: 0;
+    color: var(--lava);
+    font-size: clamp(36px, 7vw, 56px);
+}
+
+header p {
+    margin-top: 8px;
+}
+
+
+nav {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    margin-top: 24px;
+}
+
+nav a {
+    display: block;
+    width: 100%;
+    max-width: 290px;
+    padding: 10px 16px;
+    border: 1px solid var(--dourado);
+    border-radius: 8px;
+    color: var(--texto);
+    text-decoration: none;
+    background-color: #252525;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+nav a:hover {
+    background-color: #393027;
+    transform: scale(1.02);
+}
+
+nav a:focus-visible {
+    outline: 3px solid var(--lava);
+    outline-offset: 4px;
+}
+
+section {
+    margin: 24px 0;
+    padding: 24px;
+    background-color: #292929;
+    border-left: 4px solid var(--dourado);
+    border-radius: 10px;
+}
+
+h2 {
+    margin-top: 0;
+    color: var(--lava);
+}
+
+section p {
+    max-width: 65ch;
+    margin-bottom: 0;
+}
+
+
+.atributo {
+    margin-bottom: 16px;
+    padding: 20px;
+    background-color: #333333;
+    border: 1px solid var(--dourado);
+    border-radius: 12px;
+}
+
+.atributo:last-child {
+    margin-bottom: 0;
+}
+
+.atributo p {
+    margin: 0 0 8px;
+    font-weight: bold;
+}
+
+
+.barra-atributo {
+    height: 18px;
+    background-color: #101010;
+    border: 1px solid var(--dourado);
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+
+.barra-preenchida {
+    height: 100%;
+    background-color: var(--lava);
+    border-radius: inherit;
+}
+
+
+footer {
+    padding: 16px 0 32px;
+    color: #cccccc;
+}
+
+@media (max-width: 600px) {
+    header,
+    main,
+    footer {
+        width: calc(100% - 32px);
+        margin-left: 16px;
+        margin-right: 16px;
+    }
+
+    section {
+        padding: 18px;
+    }
+
+    nav a {
+        max-width: none;
+    }
+
+    .atributo {
+        padding: 16px;
+    }
+}
+.lista-inventario {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+}
+
+.card-item {
+    min-width: 0;
+    padding: 20px;
+    background-color: #333333;
+    border: 1px solid var(--dourado);
+    border-radius: 12px;
+}
+
+.card-item h3 {
+    margin-top: 0;
+    font-size: 20px;
+}
+
+.card-item .raridade {
+    color: var(--dourado);
+    font-weight: bold;
+}
+
+@media (min-width: 600px) {
+    .lista-inventario {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .lista-inventario {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+#habilidade-especial {
+    border-left-color: var(--roxo);
+}
+
+#habilidade-especial ul {
+    padding-left: 24px;
+}
+
+#habilidade-especial li {
+    margin-bottom: 8px;
+}
+
+.requisito-item {
+    display: inline-block;
+    padding: 12px 16px;
+    color: var(--texto);
+    background-color: #333333;
+    border: 1px solid var(--dourado);
+    border-radius: 8px;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.requisito-item:hover {
+    background-color: #493b25;
+    transform: scale(1.02);
+}
+
+.requisito-item:focus-visible {
+    outline: 3px solid var(--lava);
+    outline-offset: 4px;
+}
+
+.aviso-habilidade {
+    padding: 16px;
+    color: var(--texto);
+    background-color: #402820;
+    border-left: 3px solid var(--lava);
+    border-radius: 6px;
+}
+.botao-guilda {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 20px;
+    background-color: var(--lava);
+    color: #1a1a1a;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.botao-guilda:hover {
+    background-color: #ff8c61;
+    transform: scale(1.03);
+}
+
+.botao-guilda:focus-visible {
+    outline: 3px solid var(--dourado);
+    outline-offset: 4px;
+}
+
+.nota-guilda {
+    font-size: 14px;
+    color: #cccccc;
+}
+.avatar-heroi {
+    display: block;
+    width: 100%;
+    max-width: 420px;
+    height: auto;
+    margin: 16px 0 24px;
+    border: 2px solid var(--dourado);
+    border-radius: 12px;
+}
+body {
+    background-color: var(--fundo);
+    background-image:
+        linear-gradient(
+            to right,
+            rgba(26, 26, 26, 0.95),
+            rgba(26, 26, 26, 0.35)
+        ),
+        url("imagens/vulcano-nordico.png");
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+section {
+    background-color: rgba(35, 35, 35, 0.92);
+}
+
+.avatar-heroi {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip-path: inset(50%);
+    border: 0;
+}
+body {
+    background-image:
+        linear-gradient(
+            to right,
+            rgba(26, 26, 26, 0.75),
+            rgba(26, 26, 26, 0.05)
+        ),
+        url("imagens/vulcano-fundo.png");
+    background-size: cover;
+    background-position: right center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+
+@media (min-width: 1024px) {
+    header,
+    main,
+    footer {
+        width: 52%;
+        max-width: 900px;
+    }
+}

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vulcano - Ficha de Heroi</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Vulcano</h1>
+    <p>Guerreiro-Arquiteto Digital</p>
+    <nav aria-label="Menu principal">
+<a href="#sobre">Sobre</a>
+<a href="#atributos" >Atributos e Habilidades</a>   
+<a href="#inventario">Inventario</a>
+<a href="#contato">contato da Guilda</a>
+</nav>
+    </header>
+<main>
+<section id="sobre">
+<h2>sobre o Heroi</h2>
+<img
+    class="avatar-heroi"
+    src="imagens/vulcano-nordico.png"
+    alt="Vulcano, guerreiro barbado com tatuagens nórdicas, armadura de ferro e ouro e martelo incandescente."
+>
+<p>
+ Nascido nas fundições de Ostrogard, Vulcano forjou
+  armas para os guerreiros de seu reino e foi lá
+   que criou sua própria lâmina. Onde outros viam 
+    sucata, ele via invenções esperando para nascer.  
+     Resolvia problemas estruturais e fortalecia as
+      defesas do reino, transformando o descartado em solução.
+</p>
+</section>
+<section id="atributos">
+    <h2>Atributos e Habilidades</h2>
+
+    <div class="atributo">
+        <p id="nome-forca">⚔️ Força — 75%</p>
+        <div class="barra-atributo" role="progressbar"
+             aria-labelledby="nome-forca"
+             aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+            <div class="barra-preenchida" style="width: 75%;"></div>
+        </div>
+    </div>
+
+    <div class="atributo">
+        <p id="nome-construcao">🔨 Poder de Construção — 90%</p>
+        <div class="barra-atributo" role="progressbar"
+             aria-labelledby="nome-construcao"
+             aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
+            <div class="barra-preenchida" style="width: 90%;"></div>
+        </div>
+    </div>
+
+    <div class="atributo">
+        <p id="nome-defesa">🛡️ Defesa — 95%</p>
+        <div class="barra-atributo" role="progressbar"
+             aria-labelledby="nome-defesa"
+             aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">
+            <div class="barra-preenchida" style="width: 95%;"></div>
+        </div>
+    </div>
+
+    <div class="atributo">
+        <p id="nome-engenhosidade">✨ Engenhosidade — 85%</p>
+        <div class="barra-atributo" role="progressbar"
+             aria-labelledby="nome-engenhosidade"
+             aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">
+            <div class="barra-preenchida" style="width: 85%;"></div>
+        </div>
+    </div>
+
+    <div class="atributo">
+        <p id="nome-agilidade">🏃 Agilidade — 50%</p>
+        <div class="barra-atributo" role="progressbar"
+             aria-labelledby="nome-agilidade"
+             aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+            <div class="barra-preenchida" style="width: 50%;"></div>
+        </div>
+    </div>
+</section>
+<section id="habilidade-especial">
+    <h2>⚡ Regeneração de Construção</h2>
+
+    <p>
+        Vulcano usa o Martelo de Ostrogard para reconstruir
+        estruturas danificadas e fortalecer as defesas do reino.
+    </p>
+
+    <ul>
+        <li><strong>Poder:</strong> 100%</li>
+        <li><strong>Nível necessário:</strong> 60</li>
+        <li><strong>Tempo de uso:</strong> 20 segundos</li>
+        <li><strong>Recarga:</strong> 1 minuto e 30 segundos</li>
+    </ul>
+
+    <a class="requisito-item" href="#martelo-ostrogard">
+        🔨 Requer: Martelo de Ostrogard equipado
+    </a>
+
+    <p class="aviso-habilidade">
+        ⚠️ Durante o uso, Vulcano fica vulnerável:
+        os inimigos causam dano acima do normal.
+    </p>
+</section>
+<section id="inventario">
+    <h2>Inventário e Conquistas</h2>
+
+    <div class="lista-inventario">
+        <article class="card-item" id="martelo-ostrogard">
+            <h3>🔨 Martelo de Ostrogard</h3>
+            <p class="raridade">⭐ Lendário</p>
+            <p>
+                Relíquia das fundições de Ostrogard.
+                Necessário para usar a habilidade
+                Regeneração de Construção.
+            </p>
+        </article>
+
+        <article class="card-item">
+            <h3>📜 Pergaminho de Estruturas Perdidas</h3>
+            <p class="raridade">Raro</p>
+            <p>
+                Guarda projetos antigos de muralhas
+                e mecanismos de defesa do reino.
+            </p>
+        </article>
+
+        <article class="card-item">
+            <h3>🧪 Poção de Fôlego do Forjador</h3>
+            <p class="raridade">Comum</p>
+            <p>
+                Preparado usado pelos ferreiros para
+                suportar longas jornadas na forja.
+            </p>
+        </article>
+    </div>
+</section>
+
+</main>
+<section id="contato">
+    <h2>Contato com a Guilda</h2>
+
+    <h3>⚒️ Guilda dos Forjadores de Ostrogard</h3>
+
+  <a class="botao-guilda"
+  href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=vulcano.ostrogard@gmail.com"
+target="_blank" rel="noopener noreferrer">
+ Enviar mensagem ao Vulcano ✉️
+</a>
+
+<a class="botao-guilda"
+   href="https://github.com/SEU-USUARIO"
+   target="_blank"
+   rel="noopener noreferrer">
+    Ver meu GitHub ↗
+</a>
+    <p>
+        Nenhuma muralha se ergue sozinha.
+        Junte-se aos guerreiros e construtores de Ostrogard
+        para compartilhar projetos e proteger o reino.
+    </p>
+
+    <a class="botao-guilda" href="https://discord.com/"
+       target="_blank" rel="noopener noreferrer">
+        Acessar o Discord ↗
+    </a>
+
+    <p class="nota-guilda">
+        Guilda fictícia criada para este projeto.
+        O link abre o site do Discord, não um servidor da guilda.
+    </p>
+</section>
+<footer>
+    <p>Vulcano — Fundições de Ostrogard</p>
+</footer>
+</body>
+</html>
