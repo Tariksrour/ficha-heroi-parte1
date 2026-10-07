@@ -10,16 +10,24 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Vulcano</h1>
+  <header id="inicio">
+    <h1>Vulcano</h1>
     <p>Guerreiro-Arquiteto Digital</p>
-    <nav aria-label="Menu principal">
-<a href="#sobre">Sobre</a>
-<a href="#atributos" >Atributos e Habilidades</a>   
-<a href="#inventario">Inventario</a>
-<a href="#contato">contato da Guilda</a>
-</nav>
-    </header>
+
+    <details class="menu-sanduiche">
+        <summary>
+            <span aria-hidden="true">☰</span>
+            Menu
+        </summary>
+
+        <nav aria-label="Menu principal">
+            <a href="#sobre">Sobre</a>
+            <a href="#atributos">Atributos e Habilidades</a>
+            <a href="#inventario">Inventario</a>
+            <a href="#contato">contato da Guilda</a>
+        </nav>
+    </details>
+</header>
 <main>
 <section id="sobre">
 <h2>sobre o Heroi</h2>
@@ -241,11 +249,47 @@
 
     <h3>⚒️ Guilda dos Forjadores de Ostrogard</h3>
 
-  <a class="botao-guilda"
-  href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=vulcano.ostrogard@gmail.com"
-target="_blank" rel="noopener noreferrer">
- Enviar mensagem ao Vulcano ✉️
-</a>
+ <details class="contato-formulario">
+    <summary class="botao-guilda">
+        Enviar mensagem ao Vulcano ✉️
+    </summary>
+
+   <form class="formulario-vulcano" id="formulario-vulcano">
+        <label for="nome-visitante">Seu nome ou nick</label>
+        <input
+            type="text"
+            id="nome-visitante"
+            name="nome"
+            placeholder="Como você se chama?"
+            maxlength="80"
+            required
+        >
+
+        <label for="mensagem-vulcano">Sua mensagem</label>
+        <textarea
+            id="mensagem-vulcano"
+            name="mensagem"
+            placeholder="Escreva sua mensagem para Vulcano..."
+            rows="5"
+            maxlength="2000"
+            aria-describedby="limite-vulcano"
+            required
+        ></textarea>
+
+        <small id="limite-vulcano">
+            Até 2.000 caracteres.
+        </small>
+
+       <button class="botao-guilda" type="submit">
+    🔨 Continuar no Gmail
+</button>
+
+<small>
+    O Gmail abrirá com sua mensagem preenchida.
+    Confirme o envio por lá.
+</small>
+    </form>
+</details>
 
 <a class="botao-guilda"
    href="https://github.com/Tariksrour"
@@ -275,5 +319,40 @@ target="_blank" rel="noopener noreferrer">
     <p>Vulcano — Fundições de Ostrogard</p>
 </footer>
 
+<a href="#inicio"
+   class="voltar-topo"
+   aria-label="Voltar ao início"
+   title="Voltar ao início">
+    <span aria-hidden="true">🔨</span>
+</a>
+<script>
+    const formulario = document.getElementById("formulario-vulcano");
+
+    formulario.addEventListener("submit", function (evento) {
+        evento.preventDefault();
+
+        const nome = document.getElementById("nome-visitante").value.trim();
+        const mensagem = document.getElementById("mensagem-vulcano").value.trim();
+
+        if (!nome || !mensagem) {
+            alert("Preencha seu nome e sua mensagem.");
+            return;
+        }
+
+        const parametros = new URLSearchParams({
+            view: "cm",
+            fs: "1",
+            to: "vulcano.ostrogard@gmail.com",
+            su: "Mensagem para Vulcano",
+            body: `Nome ou nick: ${nome}\n\n${mensagem}`
+        });
+
+        window.open(
+            "https://mail.google.com/mail/?" + parametros.toString(),
+            "_blank",
+            "noopener,noreferrer"
+        );
+    });
+</script>
 </body>
 </html>
