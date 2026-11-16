@@ -601,3 +601,218 @@ nav a:hover,
     transform: none;
     box-shadow: none;
 }
+#botao-menu {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 18px;
+    background-color: #252525;
+    color: var(--texto);
+    border: 1px solid var(--dourado);
+    border-radius: 8px;
+    font: inherit;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+#icone-menu {
+    font-size: 28px;
+}
+
+#botao-menu:hover {
+    background-color: #493b25;
+}
+
+#botao-menu:focus-visible {
+    outline: 3px solid var(--lava);
+    outline-offset: 4px;
+}
+
+.menu-sanduiche #menu-principal {
+    display: none;
+}
+
+.menu-sanduiche #menu-principal.aberto {
+    display: flex;
+}
+
+@media (min-width: 1024px) {
+    .menu-sanduiche {
+        width: 100%;
+    }
+
+    #botao-menu {
+        display: none;
+    }
+
+    .menu-sanduiche #menu-principal {
+        display: flex;
+        position: static;
+        width: 100%;
+        flex-direction: row;
+        box-shadow: none;
+    }
+
+    .menu-sanduiche #menu-principal a {
+        flex: 1;
+        width: auto;
+    }
+}
+.filtros-inventario {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.filtro {
+    padding: 8px 14px;
+    border: 1px solid var(--dourado);
+    border-radius: 8px;
+    background-color: #252525;
+    color: var(--texto);
+    font: inherit;
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.filtro:hover {
+    background-color: #493b25;
+}
+
+.filtro.ativo {
+    background-color: var(--dourado);
+    color: #101010;
+    font-weight: 700;
+}
+
+.filtro:focus-visible {
+    outline: 3px solid var(--lava);
+    outline-offset: 3px;
+}
+
+#contador-inventario {
+    margin: 16px 0;
+}
+.experiencia {
+    margin-bottom: 24px;
+    padding: 20px;
+    background-color: #252525;
+    border: 1px solid var(--dourado);
+    border-radius: 12px;
+}
+
+.experiencia h3 {
+    margin-top: 0;
+    color: var(--dourado);
+}
+
+#texto-xp {
+    margin-bottom: 8px;
+}
+
+#preenchimento-xp {
+    width: 0%;
+    transition: width 0.3s ease;
+}
+
+#ganhar-xp {
+    border: 0;
+    font: inherit;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+#feedback-xp {
+    min-height: 1.7em;
+    color: var(--dourado);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    #preenchimento-xp {
+        transition: none;
+    }
+}#botao-historia {
+    border: 0;
+    font: inherit;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+#historia-completa[hidden] {
+    display: none;
+}
+
+.historia-completa.revelado {
+    animation: revelar-historia 0.25s ease;
+}
+
+@keyframes revelar-historia {
+    from {
+        opacity: 0;
+        transform: translateY(6px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .historia-completa.revelado {
+        animation: none;
+    }
+}
+#feedback-formulario:empty {
+    display: none;
+}
+
+#feedback-formulario {
+    margin: 0;
+    padding: 12px;
+    border-radius: 8px;
+}
+
+#feedback-formulario.erro {
+    color: #ffd5d5;
+    background-color: #492323;
+    border-left: 4px solid #ff8585;
+}
+
+#feedback-formulario.sucesso {
+    color: #d4ffdf;
+    background-color: #203d29;
+    border-left: 4px solid #7ce89b;
+}
+
+.formulario-vulcano [aria-invalid="true"] {
+    border: 2px solid #ff8585;
+}
+#botao-tema {
+    border: 0;
+    font: inherit;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+body.modo-noturno {
+    background-color: #090909;
+    background-image:
+        linear-gradient(
+            to right,
+            rgba(0, 0, 0, 0.90),
+            rgba(0, 0, 0, 0.60)
+        ),
+        url("imagens/vulcano-fundo.png");
+}
+
+body.modo-noturno section,
+body.modo-noturno .experiencia,
+body.modo-noturno .formulario-vulcano {
+    background-color: #151515;
+}
+
+body.modo-noturno .atributo,
+body.modo-noturno .card-item {
+    background-color: #202020;
+}
